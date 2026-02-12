@@ -16,7 +16,7 @@ var WordChoices = (function () {
     "back": ["pack", "black", "track", "rack", "stack", "snack", "sack", "lack", "crack", "bark"],
     "bake": ["make", "cake", "lake", "take", "fake", "wake", "sake", "brake", "shake", "rake"],
     "banner": ["manner", "dinner", "runner", "batter", "butter", "hammer", "planner", "scanner", "tanner", "winner"],
-    "baseball": ["basketball", "football", "baseball", "handball", "snowball", "fireball", "meatball", "eyeball", "pinball", "softball"],
+    "baseball": ["basketball", "football", "kickball", "handball", "snowball", "fireball", "meatball", "eyeball", "pinball", "softball"],
     "basket": ["blanket", "biscuit", "bucket", "bracket", "casket", "cricket", "jacket", "ticket", "rocket", "pocket"],
     "bear": ["beer", "bare", "dear", "fear", "gear", "hear", "near", "pear", "tear", "wear"],
     "behind": ["begin", "remind", "beside", "between", "beyond", "below", "beneath", "before", "believe", "belong"],
@@ -42,7 +42,7 @@ var WordChoices = (function () {
     "castle": ["cattle", "cancel", "candle", "cradle", "kettle", "bottle", "rattle", "little", "hassle", "fossil"],
     "catch": ["match", "batch", "patch", "watch", "scratch", "hatch", "latch", "snatch", "attach", "cash"],
     "caught": ["taught", "bought", "brought", "fought", "thought", "cough", "court", "count", "cause", "called"],
-    "chased": ["changed", "charged", "checked", "chased", "cheered", "chopped", "clashed", "crashed", "erased", "traced"],
+    "chased": ["changed", "charged", "checked", "chained", "cheered", "chopped", "clashed", "crashed", "erased", "traced"],
     "chew": ["shoe", "few", "new", "drew", "flew", "grew", "blew", "clue", "glue", "true"],
     "child": ["mild", "wild", "build", "chill", "chain", "change", "chance", "chalk", "chief", "climb"],
     "children": ["chicken", "kitchen", "kitten", "mittens", "golden", "hidden", "garden", "hundred", "listen", "frozen"],
@@ -59,8 +59,8 @@ var WordChoices = (function () {
     "computer": ["commuter", "container", "cucumber", "customer", "carpenter", "chapter", "counter", "monster", "rooster", "scooter"],
     "cookies": ["rookies", "bookies", "goodies", "hoodies", "coolers", "noodles", "hookers", "cooking", "looking", "brookies"],
     "corn": ["born", "horn", "torn", "worn", "cork", "cord", "core", "coin", "cone", "corner"],
-    "couch": ["coach", "pouch", "touch", "grouch", "crouch", "ouch", "couch", "catch", "church", "count"],
-    "cracker": ["tracker", "stacker", "hacker", "packer", "cracker", "rocker", "locker", "sucker", "checker", "flicker"],
+    "couch": ["coach", "pouch", "touch", "grouch", "crouch", "ouch", "cozy", "catch", "church", "count"],
+    "cracker": ["tracker", "stacker", "hacker", "packer", "clacker", "rocker", "locker", "sucker", "checker", "flicker"],
     "cubs": ["cups", "cuts", "clubs", "cabs", "curbs", "pubs", "rubs", "tubs", "bugs", "hugs"],
     "cup": ["cut", "cub", "cap", "cop", "pup", "sup", "up", "luck", "duck", "tuck"],
     "daily": ["daisy", "dairy", "dainty", "fairly", "mainly", "rarely", "really", "early", "easily", "family"],
@@ -68,7 +68,7 @@ var WordChoices = (function () {
     "dream": ["cream", "stream", "scream", "gleam", "steam", "beam", "team", "seam", "drum", "drama"],
     "dress": ["press", "stress", "bless", "mess", "guess", "less", "rest", "fresh", "grass", "cross"],
     "drive": ["dive", "five", "hive", "live", "thrive", "strive", "arrive", "alive", "driver", "driven"],
-    "drove": ["stove", "grove", "dove", "wove", "cove", "clove", "prove", "move", "drove", "above"],
+    "drove": ["stove", "grove", "dove", "wove", "cove", "clove", "prove", "move", "shove", "above"],
     "dryer": ["drier", "flyer", "fryer", "buyer", "player", "prayer", "layer", "mayor", "driver", "dinner"],
     "duck": ["luck", "truck", "stuck", "buck", "chuck", "muck", "tuck", "cluck", "pluck", "dock"],
     "egg": ["leg", "beg", "peg", "edge", "age", "big", "bag", "bug", "end", "add"],
@@ -80,7 +80,7 @@ var WordChoices = (function () {
     "fire": ["hire", "tire", "wire", "desire", "admire", "entire", "retire", "require", "five", "fine"],
     "five": ["dive", "drive", "hive", "live", "thrive", "arrive", "alive", "jive", "fire", "fine"],
     "flour": ["flower", "floor", "four", "hour", "our", "power", "tower", "shower", "sour", "flavor"],
-    "foggy": ["froggy", "soggy", "boggy", "doggy", "foggy", "groggy", "muddy", "fuzzy", "lucky", "funny"],
+    "foggy": ["froggy", "soggy", "boggy", "doggy", "smoggy", "groggy", "muddy", "fuzzy", "lucky", "funny"],
     "football": ["baseball", "basketball", "softball", "handball", "footwear", "footprint", "doorbell", "fireball", "snowball", "eyeball"],
     "fork": ["cork", "pork", "work", "stork", "york", "park", "bark", "dark", "mark", "farm"],
     "fur": ["sir", "her", "blur", "stir", "purr", "burr", "spur", "were", "sure", "four"],
@@ -115,7 +115,7 @@ var WordChoices = (function () {
     "later": ["water", "waiter", "greater", "crater", "skater", "gator", "letter", "ladder", "matter", "better"],
     "laugh": ["half", "calf", "graph", "staff", "leaf", "loaf", "lamp", "last", "love", "lunch"],
     "leaves": ["believes", "sleeves", "heaves", "thieves", "lives", "knives", "waves", "caves", "loaves", "leaders"],
-    "lemon": ["melon", "seven", "heaven", "lesson", "lettuce", "level", "lever", "legend", "demon", "lemon"],
+    "lemon": ["melon", "seven", "heaven", "lesson", "lettuce", "level", "lever", "legend", "demon", "lemur"],
     "lesson": ["lemon", "listen", "letter", "lesser", "blossom", "reason", "season", "person", "prison", "mission"],
     "live": ["give", "five", "dive", "hive", "alive", "drive", "thrive", "arrive", "love", "leave"],
     "look": ["book", "cook", "hook", "took", "brook", "shook", "nook", "lock", "luck", "lack"],
@@ -244,6 +244,9 @@ var WordChoices = (function () {
       shuffled[i] = shuffled[j];
       shuffled[j] = temp;
     }
+
+    // Filter out the correct word from distractors to avoid duplicates
+    shuffled = shuffled.filter(function (w) { return w !== correctWord; });
 
     // Pick distractors and add the correct word
     var choices = shuffled.slice(0, count);
