@@ -250,16 +250,25 @@ var UI = (function () {
   function renderWordChoices(choices, onSelect) {
     els.wordChoices.innerHTML = "";
     choices.forEach(function (word) {
+      var cell = document.createElement("div");
+      cell.className = "word-choice-cell";
+
       var btn = document.createElement("button");
       btn.className = "word-choice-btn";
       btn.textContent = word;
       (function (w) {
         btn.addEventListener("click", function () { onSelect(w); });
       })(word);
-      els.wordChoices.appendChild(btn);
+
+      cell.appendChild(btn);
+      els.wordChoices.appendChild(cell);
     });
     els.wordChoices.classList.remove("hidden");
   }
+
+  var SPEAKER_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">' +
+    '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>' +
+    '</svg>';
 
   function showChoiceResult(selectedWord, correctWord) {
     var buttons = els.wordChoices.querySelectorAll(".word-choice-btn");
@@ -274,6 +283,27 @@ var UI = (function () {
       } else {
         btn.classList.add("choice-dimmed");
       }
+
+      // Add pronunciation button
+      var pronounceBtn = document.createElement("button");
+      pronounceBtn.className = "word-pronounce-btn";
+      pronounceBtn.innerHTML = SPEAKER_SVG;
+      pronounceBtn.setAttribute("aria-label", "Listen to " + btnWord);
+      (function (w, pb) {
+        pb.addEventListener("click", function () {
+          // Remove active state from all pronounce buttons
+          var allPBtns = els.wordChoices.querySelectorAll(".word-pronounce-btn");
+          for (var k = 0; k < allPBtns.length; k++) {
+            allPBtns[k].classList.remove("pronounce-active");
+          }
+          pb.classList.add("pronounce-active");
+          SpeechManager.speakWord(w).then(function () {
+            pb.classList.remove("pronounce-active");
+          });
+        });
+      })(btnWord, pronounceBtn);
+
+      btn.parentNode.appendChild(pronounceBtn);
     }
 
     var isCorrect = selectedWord === correctWord;

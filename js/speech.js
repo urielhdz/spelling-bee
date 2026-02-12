@@ -17,6 +17,10 @@ var SpeechManager = (function () {
 
       var voices = synth.getVoices();
       var preferred = voices.find(function (v) {
+        return v.lang === "en-US" && v.name.toLowerCase().includes("female");
+      }) || voices.find(function (v) {
+        return v.lang === "en-US";
+      }) || voices.find(function (v) {
         return v.lang.startsWith("en") && v.name.toLowerCase().includes("female");
       }) || voices.find(function (v) {
         return v.lang.startsWith("en");
